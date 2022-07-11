@@ -8,7 +8,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import javax.persistence.NoResultException;
 import java.sql.SQLException;
-import java.util.List;
 
 public class MainApp {
    public static void main(String[] args) throws SQLException {
@@ -28,10 +27,10 @@ public class MainApp {
       Car kia = new Car("KIA", 562);
       Car mazda = new Car("Mazda", 542);
 
-      userService.add(dima.setCar(volvo).setUser(dima));
-      userService.add(ujin.setCar(bmw).setUser(ujin));
-      userService.add(yulia.setCar(kia).setUser(yulia));
-      userService.add(alex.setCar(mazda).setUser(alex));
+      userService.addUser(dima.setCar(volvo).setUser(dima));
+      userService.addUser(ujin.setCar(bmw).setUser(ujin));
+      userService.addUser(yulia.setCar(kia).setUser(yulia));
+      userService.addUser(alex.setCar(mazda).setUser(alex));
 
       for (User user : userService.listUsers()) {
          System.out.println(user + " " + user.getCar());

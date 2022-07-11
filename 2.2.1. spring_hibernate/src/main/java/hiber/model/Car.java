@@ -8,7 +8,7 @@ public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private long adId;
+    private long id;
     @Column(name = "model")
     private String model;
     @Column(name = "series")
@@ -35,12 +35,12 @@ public class Car {
         this.series = series;
     }
 
-    public long getAdId() {
-        return adId;
+    public long getId() {
+        return id;
     }
 
-    public void setAdId(long adId) {
-        this.adId = adId;
+    public void setId(long adId) {
+        this.id = adId;
     }
 
     public String getModel() {
@@ -62,7 +62,7 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "Id=" + adId +
+                "Id=" + id +
                 ", model='" + model + '\'' +
                 ", series=" + series +
                 ", user=" + user +
